@@ -1,0 +1,7 @@
+TEMPLATE:Template is a powerful feature in c++,It is used to write generic programs.
+  .Generic programs means,we can pass various datatypes.
+
+
+  TYPES:
+        1.Function template
+        2.class template
