@@ -1,5 +1,6 @@
 TEMPLATE:Template is a powerful feature in c++,It is used to write generic programs.
   .Generic programs means,we can pass various datatypes.
+  .The scope of template should be within the class.
 
 
   TYPES:
@@ -27,5 +28,55 @@ int main()
 {
     cout<<"Max value :"<<getMax<int>(2,3)<<endl;
     cout<<"Max value :"<<getMax<char>('A','a')<<endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+                                                     //CLASS TEMPLATE
+#include <iostream>
+using namespace std;
+template<class T>
+class Arithmetic
+{
+    T a,b;
+    public:
+    Arithmetic(T a,T b)
+    {
+        this->a=a;
+        this->b=b;
+    }
+    T add();
+    T sub();
+    void display();
+};
+template<class T>
+T Arithmetic<T>::add()
+{
+    return a+b;
+}
+template<class T>
+T Arithmetic<T>::sub()
+{
+    return a-b;
+}
+template<class T>
+void Arithmetic<T>::display()
+{
+    cout<<"Sum :"<<add()<<endl;
+    cout<<"Sub :"<<sub()<<endl;
+}
+
+
+int main() {
+    Arithmetic<int>obj(2,3);
+    obj.add();
+    obj.sub();
+    obj.display();
     return 0;
 }
