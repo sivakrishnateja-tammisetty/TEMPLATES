@@ -37,6 +37,23 @@ int main()
 
 
 
+#include <iostream>
+using namespace std;
+template<class T,class S>
+T add(T x,S y)
+{
+    return x+y;
+}
+int main()
+{
+   
+   cout<<add<int,int>(2,3)<<endl;
+   cout<<add<float,int>(1.2,2)<<endl;  
+    return 0;
+}
+
+
+
 
                                                      //CLASS TEMPLATE
 #include <iostream>
